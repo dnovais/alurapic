@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="alurapic">
 
 <head>
   <meta charset="UTF-8">
@@ -7,11 +7,26 @@
   <title>Alurapic</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <script src="js/lib/angular.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/controllers/photos-controller.js"></script>
+  <script src="js/directives/directives.js"></script>
 </head>
 
 <body>
-  <div class="container">
-    <h1 class="text-center">Alurapic</h1>
+  <!-- Assim como ng-app o ng-controller também é uma diretiva -->
+  <div class="container" ng-controller="PhotosController">
+    
+    <div class="jumbotron">
+      <h1 class="text-center">Alurapic</h1>
+    </div>
+    
+    <!-- Abaixo criamos uma tag imagem e colocamos as expressoes angular para definir a url e titulo -->
+    <!-- Que por sua vez vem do nosso controller PhotosController -->
+    <my-panel ng-repeat="photo in photos" title="{{photo.titulo}}">
+        <img class="img-responsive center-block" src="{{photo.url}}" alt="{{photo.titulo}}">
+    </my-panel><!-- fim panel -->
+    
   </div>
   <!-- fim container -->
 </body>
