@@ -6,4 +6,4 @@
   diretivas.
 
 */
-angular.module('alurapic', ['Directives']);
+angular.module('alurapic', ['Directives', 'ngAnimate']);

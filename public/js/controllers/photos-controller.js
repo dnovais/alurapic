@@ -12,6 +12,9 @@ angular.module('alurapic').controller('PhotosController', function ($scope, $htt
   // Toda variavel declarada dentro de uma função é privada, ou seja apenas no escopo da função. 
   $scope.photos = []
 
+  // Sera nosso filtro de acordo com que o usuario digitar na busca.
+  $scope.find = ""
+
   $http.get('v1/fotos').
   success(function(photos){
     $scope.photos = photos;
