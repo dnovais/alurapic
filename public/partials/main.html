@@ -9,7 +9,7 @@
             Nesse caso nao iremos usar o AE, iremos usar o ng-model, que proporcionara o 
             two way data-binding.
            -->
-      <input ng-model="find" ng-model-options="{debounce: 500}" type="text" class="form-control" placeholder="Find">
+      <input ng-model="find" ng-model-options="{ debounce: 500 }" type="text" class="form-control" placeholder="Find">
     </form>
   </div>
 </div>
@@ -21,8 +21,8 @@
 
         Para aplicar a busca no ng-repeat iremos usar os filters do angular.
       -->
-  <my-panel class="col-md-2 panel-effect" ng-repeat="photo in photos | filter: find" title="{{photo.titulo}}">
-    <img class="img-responsive center-block" src="{{photo.url}}" alt="{{photo.titulo}}">
+  <my-panel class="col-md-2 panel-effect" ng-repeat="photo in photos | filter: find" title="{{ photo.titulo }}">
+    <my-photo title="{{ photo.titulo }}" url="{{ photo.url }}"></my-photo>
   </my-panel>
   <!-- fim panel -->
 </div>
