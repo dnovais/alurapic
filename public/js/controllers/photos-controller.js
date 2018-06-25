@@ -1,9 +1,13 @@
 /*
   Para se criar um controller usa-se o module principal, dizemos que é um controller, depois
-  definimos como parametros o nome do controller e a função que define nosso controller
+  definimos como parametros o nome do controller (Camel case com primeira letra maiuscula) 
+  e a função que define nosso controller
 
   O $scope é uma injeção de dependencia, que diz para o angular procurar ou definir o escopo
   definido na view, para tenhamos acesso por ex. a variavel photo.
+
+  O $scope é um POJO (Plain Old Javascript Object), que pode adicionar propriedades dinamicamente
+  como é feito qnd é adicionado por ex. $scope.photos = []
 */
 
 
@@ -35,5 +39,7 @@ angular.module('alurapic').controller('PhotosController', function ($scope, $htt
     });
 
     Que pode ser feito de forma mais elegante e correta como esta acima desse bloco de comentario
+
+    ** Toda variavel declarada dentro de uma função é privada.
   */
 });

@@ -1,6 +1,10 @@
 /*
+  angular. => Objeto global do Angular
+
   Criamos nosso modulo principal da aplicacao Angular, sem precisar passar as dependencias,
   sendo assim sera um array vazio.
+
+  angular.module('module_name', []) => Criamos um novo modulo dessa forma.
 
   Ao criar o modulos de diretivas, eu preciso tambem informar ao modulo principal que eu preciso das
   diretivas.
@@ -32,7 +36,7 @@ angular.module('alurapic', ['Directives', 'ngAnimate', 'ngRoute'])
   });
 
   $routeProvider.when('/photos/new', {
-    templateUrl: 'partials/photos.html'
+    templateUrl: 'partials/photo.html'
   });
 
   $routeProvider.otherwise({ redirectTo: '/photos'});
