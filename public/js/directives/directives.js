@@ -31,7 +31,7 @@ angular.module('Directives', [])
     de scopo passada, basta apenas colocar o @, pois o mesmo ja interpretara como sendo a msm.
   */
   ddo.scope = {
-    title: '@'
+    titulo: '@'
   }
 
   /*
@@ -56,7 +56,7 @@ angular.module('Directives', [])
   ddo.restrict = 'AE';
 
   ddo.scope = {
-    title: '@',
+    titulo: '@',
     url: '@'
   }
 
